@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"  />
+    <title>Liight</title>
+    <link rel="stylesheet" href="css/estilosLogIn.css" />
+  </head>
+  <body>
+    <div class="login-box">
+      <div class="imagenFondo">
+        <img
+          src="css/imagenes/liight.png"
+          alt="liight Image"
+          class="imagenLiigth"
+        />
+      </div>
+      <form id="form" method="post" action="/auth" >
+        <div class="user-box">
+          <input type="text" name="usuario" id="usuario" required="required" />
+          <label>Usuario</label>
+        </div>
+        <div class="user-box">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            required="required"
+          />
+          <label>Contraseña</label>
+        </div>
+        <div>
+          <a href="/singup" class="singUp">SING UP</a>
+        </div>
+        <button
+          type="submit"
+          style="appearance: none; border: none; background: transparent"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Submit
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/singUp.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <body>
+ 
+<form id="forma" action="/validarNuevo"  method="post" target="_self" autocomplete="on">
+  
+  <ul id="progressbar" >
+    <li class="active">Account Setup</li>
+    <li>Personal Details</li>
+  </ul>
+  
+  <fieldset>
+    <h2 class="fs-title">Crea tu cuenta</h2>
+    <h3 class="fs-subtitle">Paso 1</h3>
+    <input  id="correo" name="correo" placeholder="Email" required="required"/>
+    <input  id="password" name="password" placeholder="Contraseña" required="required"/>
+    <!-- <input type="password" name="cpass" placeholder="Confirmar Contraseña" /> -->
+    <input type="button" name="next" class="next action-button" value="Next" />
+    
+  </fieldset>
+
+  <fieldset>
+    <h2 class="fs-title">Detalles personales</h2>
+    <h3 class="fs-subtitle">We will never sell it</h3>
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required="required"/>
+    <input type="text" id="apellido" name="apellido" placeholder="Apellido" required="required"/>
+    <input type="text" id="usuario" name="usuario" placeholder="Usuario" required="required"/>
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <button class="submit action-button">Submit</button>
+   </fieldset>
+  
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="/js/singUp.js"></script>
+
+</body>
+</html>

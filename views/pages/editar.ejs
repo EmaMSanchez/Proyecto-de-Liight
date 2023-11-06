@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/estilos.css" />
+    <title>Editar Usuario</title>
+  </head>
+  <body>
+    <header class="contenedor" id="cabecero" style="margin-top: 128px;">
+      <h1>Editar Usuario</h1>
+    </header>
+
+    <section class="contenedor">
+      <form id="forma" action="/editar/<%= usuario.IdUser %>" method="post" target="_self" autocomplete="on">
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required="required" value="<%= usuario.Nombre %>" />
+        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required="required" value="<%= usuario.Apellido %>" />
+        <input type="email" id="correo" name="correo" placeholder="Correo" required="required" value="<%= usuario.Correo %>" />
+        <input type="text" id="usuario" name="usuario" placeholder="Usuario" required="required" value="<%= usuario.Usuario %>" />
+        <input type="password" id="password" name="password" placeholder="Password" required="required" value="<%= usuario.Contraseña %>" />
+        <div style="text-align: center">
+          <button class="boton" style="cursor: pointer">Guardar Cambios</button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

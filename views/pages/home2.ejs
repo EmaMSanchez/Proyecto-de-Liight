@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Usuarios</title>
+    <link rel="stylesheet" href="/css/estiloHome.css">
+    
+    
+</head>
+<body>
+    <table >
+        <thead>
+          <tr>
+            <th colspan="3">Usuarios del Proyecto</th>
+          </tr>
+          <tr>
+            <th>ID</th>
+            <th colspan="2">Usuarios</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (let usuario of usuarios) { %>
+            <tr > 
+              <td><%= usuario.IdUser %></td>
+              <td><%=usuario.Nombre%>  <%=usuario.Apellido%></td>
+              <td>
+                <i id="editar" >
+                  <a href="/editar/<%= usuario.IdUser %>" ><img class="edit" src="/css/imagenes/lapiz.png" alt="editar"></a>
+                </i>
+                <i id="eliminar" class="delete">
+                  <a href="/eliminar/<%= usuario.IdUser %>"><img class="edit" src="/css/imagenes/eliminar.png" alt="eliminar"></a>
+                </i>
+              </td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+    <div style="text-align: center;">
+      <a  href="/crear"
+      style="appearance: none; border: none; background: transparent"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      AGREGAR
+    </div>
+    
+</body>
+</html>
